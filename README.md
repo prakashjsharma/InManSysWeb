@@ -2,7 +2,7 @@
 
 A full-stack Inventory Management System built using ASP.NET Core Web API, MVC Core, jQuery, Bootstrap, and SQL Server, designed for managing suppliers, categories, products, and dashboards with charts and KPIs.
 
-#🚀 Features
+# 🚀 Features
 # 1. RESTful API (ASP.NET Core Web API)
 
 CRUD operations for:
@@ -212,15 +212,20 @@ This project is open source and available under the MIT License.
 
 # Get
 <img width="1366" height="391" alt="image" src="https://github.com/user-attachments/assets/c0a46aa3-c957-436c-ae86-8023fdb79e4e" />
+
 # POST
 <img width="517" height="554" alt="image" src="https://github.com/user-attachments/assets/c8e962d6-66e2-4d55-a0ab-37c8e26d616a" />
+
 # PUT
 <img width="512" height="554" alt="image" src="https://github.com/user-attachments/assets/0b98d0a2-1ecd-4f13-a1f1-623faec3b5f9" />
+
 # DELETE
 <img width="516" height="241" alt="image" src="https://github.com/user-attachments/assets/0d4dbfa7-f1fb-4910-bdd2-8107757f0051" />
 
+
 # Dashboard
 <img width="1366" height="610" alt="image" src="https://github.com/user-attachments/assets/a11f8569-c084-4b7a-a89c-bcbf394123ac" />
+
 # Dashboard Products Details
 <img width="546" height="535" alt="image" src="https://github.com/user-attachments/assets/65dc4561-58c3-4ca5-8c08-0290b5782c62" />
 
