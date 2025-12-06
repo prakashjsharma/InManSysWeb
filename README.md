@@ -5,104 +5,64 @@ A full-stack Inventory Management System built using ASP.NET Core Web API, MVC C
 # 🚀 Features
 # 1. RESTful API (ASP.NET Core Web API)
 
-CRUD operations for:
-
-Suppliers
-
-Categories
-
-Products (with image upload)
-
-Auto-generated fields (Status, Creation Dates, etc.)
-
-Validations using DataAnnotations
-
-Structured API responses & proper error handling
-
-Clean separation of API and UI
+- CRUD operations for:
+    - Suppliers
+    - Categories
+    - Products (with image upload)
+- Auto-generated fields (Status, Creation Dates, etc.)
+- Validations using DataAnnotations
+- Structured API responses & proper error handling
+- Clean separation of API and UI
 
 # 2. Web UI (ASP.NET MVC Core + jQuery)
 
 Fully responsive UI using Bootstrap 5
-
-DataTables for listing Suppliers, Categories, Products
-
-Highcharts Dashboard:
-
-Total Suppliers / Categories / Products (KPIs)
-
-Product Count by Supplier (Column Chart)
-
-Product Count by Category (Column Chart)
-
-Image preview before upload
-
-Modal-based CRUD operations
-
-Toast notifications (Success / Error)
-
-AJAX-based data loading
+- DataTables for listing Suppliers, Categories, Products
+- Highcharts Dashboard:
+    - Total Suppliers / Categories / Products (KPIs)
+    - Product Count by Supplier (Column Chart)
+    - Product Count by Category (Column Chart)
+- Image preview before upload
+- Modal-based CRUD operations
+- Toast notifications (Success / Error)
+- AJAX-based data loading
 
 # 3. File Upload Handling
-
-Product image upload using IFormFile
-
-Image saved to /wwwroot/uploads/products
-
-Auto directory creation
-
-Old image replaced on update
+- Product image upload using IFormFile
+- Image saved to /wwwroot/uploads/products
+- Auto directory creation
+- Old image replaced on update
 
 # 4. Database Layer (Entity Framework Core)
-
-Code-first models
-
-Foreign key relationships
-
-EF Core migrations
-
-LINQ joins for dashboard data
-
-Optimized queries with AsNoTracking()
+- Code-first models
+- Foreign key relationships
+- EF Core migrations
+- LINQ joins for dashboard data
+- Optimized queries with AsNoTracking()
 
 # 🏗 Tech Stack
 # Frontend
-
-HTML5, CSS3
-
-Bootstrap 5
-
-JavaScript / jQuery
-
-DataTables.js
-
-Highcharts.js
+- HTML5, CSS3
+- Bootstrap 5
+- JavaScript / jQuery
+- DataTables.js
+- Highcharts.js
 
 # Backend
-
-ASP.NET Core MVC
-
-ASP.NET Core Web API
-
-C#
-
-Entity Framework Core
+- ASP.NET Core MVC
+- ASP.NET Core Web API
+- C#
+- Entity Framework Core
 
 # Database
-
-SQL Server
-
-Code-first EF migrations
+- SQL Server
+- Code-first EF migrations
 
 # Tools
-
-Visual Studio 2022
-
-SSMS
-
-Git / GitHub
-
-Postman
+- Visual Studio 2022
+- SSMS
+- Git / GitHub
+- Postman
 
 # 📁 Project Structure
 
@@ -175,13 +135,13 @@ GET /api/dashboard/products-table
 - Supplier | Category | Product | Price | View Details (with image modal)
 
 # 📸 Product Module Features
-Create, Edit, Delete products
-Upload product image
-Show image preview before upload
-Show image in table
-Show full product details in modal
-Supplier & Category dropdowns
-Full validation & API error handling
+- Create, Edit, Delete products
+- Upload product image
+- Show image preview before upload
+- Show image in table
+- Show full product details in modal
+- Supplier & Category dropdowns
+- Full validation & API error handling
 
 # ⚙️ Setup Instructions
 1️⃣ Clone Repository
