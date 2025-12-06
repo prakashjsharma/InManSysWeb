@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+
+@section Scripts {
+    <script src="/js/Products.js"></script>
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between mb-3">
+        <h2>Products</h2>
+        <button class="btn btn-warning" id="btnAdd">Add Product</button>
+    </div>
+
+    <table id="productTable" class="display table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ArticleNo</th>
+                <th>Supplier</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal">
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <form id="productForm" enctype="multipart/form-data">
+                <div class="modal-header">
+                    <h5 class="modal-title">Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+
+                    <input type="hidden" id="Id" name="Id" />
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="Name">Name</label>
+                                    <input class="form-control" name="Name" id="Name" required />
+                                </div>
+
+                                <div class="col-md-3 mb-3">
+                                    <label for="ArticleNo">Article No</label>
+                                    <input class="form-control" name="ArticleNo" id="ArticleNo" required />
+                                </div>
+
+                                <div class="col-md-3 mb-3">
+                                    <label for="UPCCode">UPC Code</label>
+                                    <input class="form-control" name="UPCCode" id="UPCCode" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-2 mb-3">
+                                    <label for="CostPrice">Cost Price</label>
+                                    <input type="number" class="form-control" name="CostPrice" id="CostPrice" required />
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <label for="Price">Price</label>
+                                    <input type="number" class="form-control" name="Price" id="Price" required />
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                    <label for="DiscountPrice">Discount Price</label>
+                                    <input type="number" class="form-control" name="DiscountPrice" id="DiscountPrice" required />
+                                </div>
+
+                                <div class="col-md-1 mb-3">
+                                    <label for="Height">Height</label>
+                                    <input type="number" class="form-control" name="Height" id="Height" required />
+                                </div>
+
+                                <div class="col-md-1 mb-3">
+                                    <label for="Width">Width</label>
+                                    <input type="number" class="form-control" name="Width" id="Width" required />
+                                </div>
+
+                                <div class="col-md-1 mb-3">
+                                    <label for="Depth">Depth</label>
+                                    <input type="number" class="form-control" name="Depth" id="Depth" required />
+                                </div>
+
+                                <div class="col-md-1 mb-3">
+                                    <label for="Weight">Weight</label>
+                                    <input type="number" class="form-control" name="Weight" id="Weight" required />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-9">
+                            <div class="row">                              
+                                <div class="col-md-4 mb-3">
+                                    <label for="ReorderLevel">Reorder Level</label>
+                                    <input class="form-control" name="ReorderLevel" id="ReorderLevel" required />
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <label for="ShelfLifeDays">Shelf Life Days</label>
+                                    <input class="form-control" name="ShelfLifeDays" id="ShelfLifeDays" />
+                                </div>
+
+                                <div class="col-md-4 mb-3">
+                                    <label for="UnitOfMeasure">Unit Of Measure (UOM)</label>
+                                    <input class="form-control" name="UnitOfMeasure" id="UnitOfMeasure" />
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label>Supplier</label>
+                                    <select class="form-control" id="SupplierId" name="SupplierId" required></select>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label>Category</label>
+                                    <select class="form-control" id="CategoryId" name="CategoryId" required></select>
+                                </div>
+
+                                <div class="col-md-12 mb-3">
+                                    <label for="Description">Description</label>
+                                    <textarea class="form-control" name="Description" id="Description"></textarea>
+                                </div>
+                            </div>
+
+                        </div>
+                                                
+                        <div class="col-md-3 mb-3">
+                            <label>Product Image</label>
+                            <div class="row mb-3">
+                                <div class="col-md-12" style="height: 10em;">
+                                    <img id="previewImage" src="" class="img-thumbnail" onerror="this.src='https://img.freepik.com/free-psd/3d-rendered-picture-icon-with-mountainous-landscape-inside-blue-circle_84443-55902.jpg?ga=GA1.1.2046593718.1762611149&semt=ais_hybrid&w=740&q=80'" style="width:100%; height:100%; object-fit:cover;" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="file" class="form-control" name="imageFile" id="imageFile" />
+                                </div>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="btnCancel" data-bs-dismiss="modal">Close</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <label class="" id="appToastIcon"></label>
+            <strong class="me-auto" id="appToastType">CoreUI for Bootstrap</strong>
+            @* <small>11 mins ago</small> *@
+            <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="appToastBody">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>

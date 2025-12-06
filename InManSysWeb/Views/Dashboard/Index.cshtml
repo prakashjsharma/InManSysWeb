@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+@section Scripts {
+    <script src="/js/Dashboard.js"></script>
+}
+
+<div class="container-fluid mt-4">
+    <div class="row g-3">
+        <!-- KPI cards -->
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h6>Total Suppliers</h6>
+                <h2 id="kpiSuppliers">0</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h6>Total Categories</h6>
+                <h2 id="kpiCategories">0</h2>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h6>Total Products</h6>
+                <h2 id="kpiProducts">0</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4 g-3">
+        <div class="col-md-6">
+            <div id="chartBySupplier" style="height: 350px;"></div>
+        </div>
+        <div class="col-md-6">
+            <div id="chartByCategory" style="height: 350px;"></div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <table id="dashboardProductsTable" class="table table-bordered display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Supplier</th>
+                        <th>Category</th>
+                        <th>Product</th>
+                        <th>ArticleNo</th>
+                        <th>UPCCode</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>View</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Product Details Modal -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pdName">Product Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img id="pdImage" src="" class="img-fluid img-thumbnail" style="object-fit:cover;" />
+                    </div>
+                    <div class="col-md-8">
+                        <table class="table table-sm">
+                            <tbody id="pdBody">
+                                <!-- populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="appToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <label class="" id="appToastIcon"></label>
+            <strong class="me-auto" id="appToastType">CoreUI for Bootstrap</strong>
+            @* <small>11 mins ago</small> *@
+            <button type="button" class="btn-close" data-coreui-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="appToastBody">
+            Hello, world! This is a toast message.
+        </div>
+    </div>
+</div>
